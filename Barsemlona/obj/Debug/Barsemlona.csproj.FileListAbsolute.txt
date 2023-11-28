@@ -26,3 +26,4 @@ C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.csproj.CopyComplete
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.exe
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.pdb
+C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.GerenciamentoTimes.resources

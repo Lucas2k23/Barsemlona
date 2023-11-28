@@ -9,8 +9,7 @@ using MySqlConnector;
 
 namespace Barsemlona.Classes.Banco
 {
-    internal class Banco
-    {
+   
         public class ConexaoBanco
         {
             // Nas linhas abaixo você poderá mudar as informações da conexão com o bd:
@@ -63,4 +62,4 @@ namespace Barsemlona.Classes.Banco
             }
         }
     }
-}
+

@@ -16,5 +16,11 @@ namespace Barsemlona
         {
             InitializeComponent();
         }
+
+        private void btnTimes_Click(object sender, EventArgs e)
+        {
+            GerenciamentoTimes janela = new GerenciamentoTimes();
+            janela.Show();
+        }
     }
 }
