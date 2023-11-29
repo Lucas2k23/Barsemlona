@@ -75,13 +75,19 @@
     <Compile Include="Classes\Banco\Banco.cs" />
     <Compile Include="Classes\contrato.cs" />
     <Compile Include="Classes\Divisoes.cs" />
-    <Compile Include="Classes\jogadores.cs" />
+    <Compile Include="Classes\Jogadores.cs" />
     <Compile Include="Classes\Time.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciamentoJogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciamentoJogador.Designer.cs">
+      <DependentUpon>GerenciamentoJogador.cs</DependentUpon>
     </Compile>
     <Compile Include="GerenciamentoTimes.cs">
       <SubType>Form</SubType>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenciamentoJogador.resx">
+      <DependentUpon>GerenciamentoJogador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerenciamentoTimes.resx">
       <DependentUpon>GerenciamentoTimes.cs</DependentUpon>

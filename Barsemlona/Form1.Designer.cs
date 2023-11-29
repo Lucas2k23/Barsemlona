@@ -50,6 +50,7 @@
             this.btnJogadores.TabIndex = 2;
             this.btnJogadores.Text = "Jogadores";
             this.btnJogadores.UseVisualStyleBackColor = true;
+            this.btnJogadores.Click += new System.EventHandler(this.btnJogadores_Click);
             // 
             // Form1
             // 

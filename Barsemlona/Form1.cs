@@ -22,5 +22,11 @@ namespace Barsemlona
             GerenciamentoTimes janela = new GerenciamentoTimes();
             janela.Show();
         }
+
+        private void btnJogadores_Click(object sender, EventArgs e)
+        {
+            GerenciamentoJogador janela = new GerenciamentoJogador();
+            janela.Show();
+        }
     }
 }

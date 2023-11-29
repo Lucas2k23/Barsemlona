@@ -85,6 +85,7 @@ namespace Barsemlona
         {
             //ativar os group box:
             gpbEditar.Enabled = true;
+            gpbApagar.Enabled = true;
 
             
             //gpbApagar.Enabled = true;
@@ -98,9 +99,10 @@ namespace Barsemlona
 
             //prrencher os campos:
             txbEditarNome.Text = linha.Cells[1].Value.ToString();
+            txbApagar.Text = linha.Cells[1].Value.ToString();
 
             //Juntar o id e o nome para exibir no apagar:
-            //lblInformacao.Text = linha.Cells[0].Value.ToString();
+            lblInformacao.Text = linha.Cells[0].Value.ToString();
             linha.Cells[1].Value.ToString();
 
             //Salvar o id do selecionado na variavel global:
@@ -128,13 +130,13 @@ namespace Barsemlona
                     //Atualizar o dgv:
                     dgvTimes.DataSource = time.ListarTudo();
                     //Limpar os campos de edição:
-                    txbNomeEditar.Clear();
-                    txbPrecoEdit.Clear();
-                    cmbCatEdit.Items.Clear();
-                    lblInformacao.Text = "Selecione um usuario para apagar.";
+                    txbEditarNome.Clear();
+                    cmbEditarDivisao.SelectedIndex = -1;
+                    
+                    //lblInformacao.Text = "Selecione um usuario para apagar.";
                     //Desabilitar os grbs:
-                    gpbApagarProd.Enabled = false;
-                    gpbEditProd.Enabled = false;
+                    gpbApagar.Enabled = false;
+                    gpbEditar.Enabled = false;
 
                 }
 

@@ -30,11 +30,11 @@
         {
             this.dgvTimes = new System.Windows.Forms.DataGridView();
             this.gpbCadastrar = new System.Windows.Forms.GroupBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txbNome = new System.Windows.Forms.TextBox();
-            this.lblDivisao = new System.Windows.Forms.Label();
-            this.cmbDivisao = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.cmbDivisao = new System.Windows.Forms.ComboBox();
+            this.lblDivisao = new System.Windows.Forms.Label();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
             this.gpbEditar = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.cmbEditarDivisao = new System.Windows.Forms.ComboBox();
@@ -43,10 +43,9 @@
             this.lblNomeEdit = new System.Windows.Forms.Label();
             this.gpbApagar = new System.Windows.Forms.GroupBox();
             this.btnApagar = new System.Windows.Forms.Button();
-            this.cmbApagar = new System.Windows.Forms.ComboBox();
-            this.lblDivisaoApagar = new System.Windows.Forms.Label();
             this.txbApagar = new System.Windows.Forms.TextBox();
             this.lblNomeApagar = new System.Windows.Forms.Label();
+            this.lblInformacao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimes)).BeginInit();
             this.gpbCadastrar.SuspendLayout();
             this.gpbEditar.SuspendLayout();
@@ -59,6 +58,7 @@
             this.dgvTimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimes.Location = new System.Drawing.Point(186, 33);
             this.dgvTimes.Name = "dgvTimes";
+            this.dgvTimes.ReadOnly = true;
             this.dgvTimes.Size = new System.Drawing.Size(427, 185);
             this.dgvTimes.TabIndex = 0;
             this.dgvTimes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimes_CellClick);
@@ -79,30 +79,16 @@
             this.gpbCadastrar.TabStop = false;
             this.gpbCadastrar.Text = "Cadastrar Time";
             // 
-            // lblNome
+            // btnCadastrar
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(10, 31);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(76, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome do Time";
-            // 
-            // txbNome
-            // 
-            this.txbNome.Location = new System.Drawing.Point(93, 31);
-            this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(100, 20);
-            this.txbNome.TabIndex = 1;
-            // 
-            // lblDivisao
-            // 
-            this.lblDivisao.AutoSize = true;
-            this.lblDivisao.Location = new System.Drawing.Point(13, 72);
-            this.lblDivisao.Name = "lblDivisao";
-            this.lblDivisao.Size = new System.Drawing.Size(42, 13);
-            this.lblDivisao.TabIndex = 2;
-            this.lblDivisao.Text = "Divisão";
+            this.btnCadastrar.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnCadastrar.Location = new System.Drawing.Point(27, 115);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(183, 43);
+            this.btnCadastrar.TabIndex = 4;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // cmbDivisao
             // 
@@ -116,16 +102,30 @@
             this.cmbDivisao.Size = new System.Drawing.Size(121, 21);
             this.cmbDivisao.TabIndex = 3;
             // 
-            // btnCadastrar
+            // lblDivisao
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnCadastrar.Location = new System.Drawing.Point(27, 115);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(183, 43);
-            this.btnCadastrar.TabIndex = 4;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.lblDivisao.AutoSize = true;
+            this.lblDivisao.Location = new System.Drawing.Point(13, 72);
+            this.lblDivisao.Name = "lblDivisao";
+            this.lblDivisao.Size = new System.Drawing.Size(42, 13);
+            this.lblDivisao.TabIndex = 2;
+            this.lblDivisao.Text = "Divisão";
+            // 
+            // txbNome
+            // 
+            this.txbNome.Location = new System.Drawing.Point(93, 31);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(100, 20);
+            this.txbNome.TabIndex = 1;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(10, 31);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(76, 13);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome do Time";
             // 
             // gpbEditar
             // 
@@ -135,12 +135,13 @@
             this.gpbEditar.Controls.Add(this.lblDivisaoEdit);
             this.gpbEditar.Controls.Add(this.txbEditarNome);
             this.gpbEditar.Controls.Add(this.lblNomeEdit);
+            this.gpbEditar.Enabled = false;
             this.gpbEditar.Location = new System.Drawing.Point(277, 224);
             this.gpbEditar.Name = "gpbEditar";
             this.gpbEditar.Size = new System.Drawing.Size(245, 190);
             this.gpbEditar.TabIndex = 5;
             this.gpbEditar.TabStop = false;
-            this.gpbEditar.Text = "Cadastrar Time";
+            this.gpbEditar.Text = "Editar Time";
             this.gpbEditar.Enter += new System.EventHandler(this.gpbEditar_Enter);
             // 
             // btnEditar
@@ -195,11 +196,11 @@
             // gpbApagar
             // 
             this.gpbApagar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gpbApagar.Controls.Add(this.lblInformacao);
             this.gpbApagar.Controls.Add(this.btnApagar);
-            this.gpbApagar.Controls.Add(this.cmbApagar);
-            this.gpbApagar.Controls.Add(this.lblDivisaoApagar);
             this.gpbApagar.Controls.Add(this.txbApagar);
             this.gpbApagar.Controls.Add(this.lblNomeApagar);
+            this.gpbApagar.Enabled = false;
             this.gpbApagar.Location = new System.Drawing.Point(528, 224);
             this.gpbApagar.Name = "gpbApagar";
             this.gpbApagar.Size = new System.Drawing.Size(245, 190);
@@ -219,27 +220,6 @@
             this.btnApagar.UseVisualStyleBackColor = false;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
-            // cmbApagar
-            // 
-            this.cmbApagar.FormattingEnabled = true;
-            this.cmbApagar.Items.AddRange(new object[] {
-            "1- Serie A",
-            "2- Serie B",
-            "3- Serie C"});
-            this.cmbApagar.Location = new System.Drawing.Point(72, 69);
-            this.cmbApagar.Name = "cmbApagar";
-            this.cmbApagar.Size = new System.Drawing.Size(121, 21);
-            this.cmbApagar.TabIndex = 3;
-            // 
-            // lblDivisaoApagar
-            // 
-            this.lblDivisaoApagar.AutoSize = true;
-            this.lblDivisaoApagar.Location = new System.Drawing.Point(13, 72);
-            this.lblDivisaoApagar.Name = "lblDivisaoApagar";
-            this.lblDivisaoApagar.Size = new System.Drawing.Size(42, 13);
-            this.lblDivisaoApagar.TabIndex = 2;
-            this.lblDivisaoApagar.Text = "Divisão";
-            // 
             // txbApagar
             // 
             this.txbApagar.Location = new System.Drawing.Point(93, 31);
@@ -255,6 +235,14 @@
             this.lblNomeApagar.Size = new System.Drawing.Size(76, 13);
             this.lblNomeApagar.TabIndex = 0;
             this.lblNomeApagar.Text = "Nome do Time";
+            // 
+            // lblInformacao
+            // 
+            this.lblInformacao.AutoSize = true;
+            this.lblInformacao.Location = new System.Drawing.Point(13, 71);
+            this.lblInformacao.Name = "lblInformacao";
+            this.lblInformacao.Size = new System.Drawing.Size(0, 13);
+            this.lblInformacao.TabIndex = 5;
             // 
             // GerenciamentoTimes
             // 
@@ -298,9 +286,8 @@
         private System.Windows.Forms.Label lblNomeEdit;
         private System.Windows.Forms.GroupBox gpbApagar;
         private System.Windows.Forms.Button btnApagar;
-        private System.Windows.Forms.ComboBox cmbApagar;
-        private System.Windows.Forms.Label lblDivisaoApagar;
         private System.Windows.Forms.TextBox txbApagar;
         private System.Windows.Forms.Label lblNomeApagar;
+        private System.Windows.Forms.Label lblInformacao;
     }
 }
