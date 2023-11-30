@@ -143,7 +143,7 @@ namespace Barsemlona
             }
             else
             {
-                MessageBox.Show("Falha ao apagar usuario!", "Falha!",
+                MessageBox.Show("Falha ao apagar Time!", "Falha!",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }

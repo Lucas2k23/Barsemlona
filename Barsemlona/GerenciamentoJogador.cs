@@ -98,6 +98,41 @@ namespace Barsemlona
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
+            j.IdJogador = idSelecionado;
+            //Apagar:
+            var r = MessageBox.Show("Tem certeza que deseja apagar?", "Atenção!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                if (j.ApagarJogador() == true)
+                {
+                    MessageBox.Show("Jogador apagado!", " sucesso!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Atualizar o dgv:
+                    dgvJogador.DataSource = j.ListarTudo();
+                    //Limpar os campos de edição:
+                    txbNomeEdit.Clear();
+                    cmbPosicaoEdit.SelectedIndex = -1;
+
+                    //lblInformacao.Text = "Selecione um usuario para apagar.";
+                    //Desabilitar os grbs:
+                    gpbApagarJogador.Enabled = false;
+                    gpbJogadorEditar.Enabled = false;
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Falha ao apagar Jogador!", "Falha!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+
+        private void dgvJogador_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -19,14 +19,35 @@ namespace Barsemlona
 
         private void btnTimes_Click(object sender, EventArgs e)
         {
-            GerenciamentoTimes janela = new GerenciamentoTimes();
-            janela.Show();
+            
         }
 
         private void btnJogadores_Click(object sender, EventArgs e)
         {
-            GerenciamentoJogador janela = new GerenciamentoJogador();
-            janela.Show();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            //Instanciar a janela de login:
+
+            TelaDeInicio janela = new TelaDeInicio();
+
+            //Mostrar a janela:
+            janela.ShowDialog();
+
+            //fechar tudo ao fechar o login:
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

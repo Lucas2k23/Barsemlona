@@ -30,27 +30,27 @@
         {
             this.dgvJogador = new System.Windows.Forms.DataGridView();
             this.gpbApagarJogador = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblInformacaoApagar = new System.Windows.Forms.Label();
             this.btnApagar = new System.Windows.Forms.Button();
             this.txbApagarNome = new System.Windows.Forms.TextBox();
             this.lblNomeApagar = new System.Windows.Forms.Label();
             this.gpbCadastrarJogador = new System.Windows.Forms.GroupBox();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.lblDataNascimento = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.cmbPosicao = new System.Windows.Forms.ComboBox();
             this.lblPosicao = new System.Windows.Forms.Label();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.lblNomeJogador = new System.Windows.Forms.Label();
-            this.lblDataNascimento = new System.Windows.Forms.Label();
             this.gpbJogadorEditar = new System.Windows.Forms.GroupBox();
+            this.cmbPosicaoEdit = new System.Windows.Forms.ComboBox();
+            this.dtpDataEdit = new System.Windows.Forms.DateTimePicker();
             this.lblDataEdit = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblPosicaoEdit = new System.Windows.Forms.Label();
             this.txbNomeEdit = new System.Windows.Forms.TextBox();
             this.lblNomeEdit = new System.Windows.Forms.Label();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataEdit = new System.Windows.Forms.DateTimePicker();
-            this.cmbPosicaoEdit = new System.Windows.Forms.ComboBox();
-            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJogador)).BeginInit();
             this.gpbApagarJogador.SuspendLayout();
             this.gpbCadastrarJogador.SuspendLayout();
@@ -66,6 +66,7 @@
             this.dgvJogador.Size = new System.Drawing.Size(777, 230);
             this.dgvJogador.TabIndex = 0;
             this.dgvJogador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJogador_CellClick);
+            this.dgvJogador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJogador_CellContentClick);
             // 
             // gpbApagarJogador
             // 
@@ -82,6 +83,15 @@
             this.gpbApagarJogador.TabIndex = 9;
             this.gpbApagarJogador.TabStop = false;
             this.gpbApagarJogador.Text = "Apagar Jogador";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(6, 69);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(19, 13);
+            this.lblId.TabIndex = 6;
+            this.lblId.Text = "Id:";
             // 
             // lblInformacaoApagar
             // 
@@ -135,6 +145,22 @@
             this.gpbCadastrarJogador.TabIndex = 7;
             this.gpbCadastrarJogador.TabStop = false;
             this.gpbCadastrarJogador.Text = "Cadastrar Jogador";
+            // 
+            // dtpData
+            // 
+            this.dtpData.Location = new System.Drawing.Point(107, 115);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(132, 20);
+            this.dtpData.TabIndex = 9;
+            // 
+            // lblDataNascimento
+            // 
+            this.lblDataNascimento.AutoSize = true;
+            this.lblDataNascimento.Location = new System.Drawing.Point(13, 115);
+            this.lblDataNascimento.Name = "lblDataNascimento";
+            this.lblDataNascimento.Size = new System.Drawing.Size(89, 13);
+            this.lblDataNascimento.TabIndex = 5;
+            this.lblDataNascimento.Text = "Data Nascimento";
             // 
             // btnCadastrar
             // 
@@ -192,15 +218,6 @@
             this.lblNomeJogador.TabIndex = 0;
             this.lblNomeJogador.Text = "Nome do Jogador";
             // 
-            // lblDataNascimento
-            // 
-            this.lblDataNascimento.AutoSize = true;
-            this.lblDataNascimento.Location = new System.Drawing.Point(13, 115);
-            this.lblDataNascimento.Name = "lblDataNascimento";
-            this.lblDataNascimento.Size = new System.Drawing.Size(89, 13);
-            this.lblDataNascimento.TabIndex = 5;
-            this.lblDataNascimento.Text = "Data Nascimento";
-            // 
             // gpbJogadorEditar
             // 
             this.gpbJogadorEditar.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -218,6 +235,33 @@
             this.gpbJogadorEditar.TabIndex = 10;
             this.gpbJogadorEditar.TabStop = false;
             this.gpbJogadorEditar.Text = "Editar Jogador";
+            // 
+            // cmbPosicaoEdit
+            // 
+            this.cmbPosicaoEdit.FormattingEnabled = true;
+            this.cmbPosicaoEdit.Items.AddRange(new object[] {
+            "1- GOL",
+            "2- ZAG",
+            "3- LD",
+            "4- LE",
+            "5- VOL",
+            "6- ME",
+            "7- MD",
+            "8- MC",
+            "9- ATA",
+            "10- PD",
+            "11- PE"});
+            this.cmbPosicaoEdit.Location = new System.Drawing.Point(86, 72);
+            this.cmbPosicaoEdit.Name = "cmbPosicaoEdit";
+            this.cmbPosicaoEdit.Size = new System.Drawing.Size(121, 21);
+            this.cmbPosicaoEdit.TabIndex = 11;
+            // 
+            // dtpDataEdit
+            // 
+            this.dtpDataEdit.Location = new System.Drawing.Point(107, 115);
+            this.dtpDataEdit.Name = "dtpDataEdit";
+            this.dtpDataEdit.Size = new System.Drawing.Size(132, 20);
+            this.dtpDataEdit.TabIndex = 10;
             // 
             // lblDataEdit
             // 
@@ -263,49 +307,6 @@
             this.lblNomeEdit.Size = new System.Drawing.Size(91, 13);
             this.lblNomeEdit.TabIndex = 0;
             this.lblNomeEdit.Text = "Nome do Jogador";
-            // 
-            // dtpData
-            // 
-            this.dtpData.Location = new System.Drawing.Point(107, 115);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(132, 20);
-            this.dtpData.TabIndex = 9;
-            // 
-            // dtpDataEdit
-            // 
-            this.dtpDataEdit.Location = new System.Drawing.Point(107, 115);
-            this.dtpDataEdit.Name = "dtpDataEdit";
-            this.dtpDataEdit.Size = new System.Drawing.Size(132, 20);
-            this.dtpDataEdit.TabIndex = 10;
-            // 
-            // cmbPosicaoEdit
-            // 
-            this.cmbPosicaoEdit.FormattingEnabled = true;
-            this.cmbPosicaoEdit.Items.AddRange(new object[] {
-            "1- GOL",
-            "2- ZAG",
-            "3- LD",
-            "4- LE",
-            "5- VOL",
-            "6- ME",
-            "7- MD",
-            "8- MC",
-            "9- ATA",
-            "10- PD",
-            "11- PE"});
-            this.cmbPosicaoEdit.Location = new System.Drawing.Point(86, 72);
-            this.cmbPosicaoEdit.Name = "cmbPosicaoEdit";
-            this.cmbPosicaoEdit.Size = new System.Drawing.Size(121, 21);
-            this.cmbPosicaoEdit.TabIndex = 11;
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 69);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(19, 13);
-            this.lblId.TabIndex = 6;
-            this.lblId.Text = "Id:";
             // 
             // GerenciamentoJogador
             // 

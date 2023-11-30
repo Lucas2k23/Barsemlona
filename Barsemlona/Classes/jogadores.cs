@@ -19,7 +19,7 @@ namespace Barsemlona.Classes
         public DataTable ListarTudo()
         {
             string comando = "SELECT id_jogadores AS 'Id',nome AS 'Nome do Time', posicao AS 'Posicao', data_nascimento AS 'Data de Nascimento' " +
-                "FROM jogadores";
+                "FROM jogadores ";
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
@@ -97,7 +97,7 @@ namespace Barsemlona.Classes
             }
 
         }
-        public bool ApagarTime()
+        public bool ApagarJogador()
         {
             string comando = "DELETE FROM jogadores WHERE id_jogadores = @id_jogadores";
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
