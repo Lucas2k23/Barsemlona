@@ -1,6 +1,7 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,8 +29,8 @@ namespace Barsemlona.Classes
             cmd.Parameters.AddWithValue("@data_contrato", DataContrato);
 
             cmd.Prepare();
-            //try
-            //{
+            try
+            {
                 if (cmd.ExecuteNonQuery() == 0)
                 {
                     conexaoBD.Desconectar(con);
@@ -40,12 +41,88 @@ namespace Barsemlona.Classes
                     conexaoBD.Desconectar(con);
                     return true;
                 }
-            //}
-            //catch
-            //{
-            //    conexaoBD.Desconectar(con);
-            //    return false;
-            //}
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
+        public DataTable ListarContrato()
+        {
+            string comando = "SELECT * FROM view_contratos ";
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+            cmd.Prepare();
+            // Declarar tabela que irá receber o resultado:
+            DataTable tabela = new DataTable();
+            // Preencher a tabela com o resultado da consulta
+            tabela.Load(cmd.ExecuteReader());
+            conexaoBD.Desconectar(con);
+            return tabela;
+        }
+        public bool EditarContrato()
+        {
+            string comando = "UPDATE contrato SET valor_contrato = @valor_contrato WHERE id_contrato = @id_contrato ";
+
+
+
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@id_contrato", IdContrato);
+            cmd.Parameters.AddWithValue("@valor_contrato", ValorContrato);
+            
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+
+        }
+        public bool DispensarContrato()
+        {
+            string comando = "DELETE FROM contrato WHERE id_contrato = @id_contrato";
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
+
+            cmd.Parameters.AddWithValue("@id_contrato", IdContrato);
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
         }
     }
+
 }

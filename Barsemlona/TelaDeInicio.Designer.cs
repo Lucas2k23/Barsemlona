@@ -32,12 +32,13 @@
             this.btnTimes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnContrato = new System.Windows.Forms.Button();
+            this.btnGerenciamentoContrato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnJogadores
             // 
-            this.btnJogadores.Location = new System.Drawing.Point(267, 180);
+            this.btnJogadores.Location = new System.Drawing.Point(279, 180);
             this.btnJogadores.Name = "btnJogadores";
             this.btnJogadores.Size = new System.Drawing.Size(75, 23);
             this.btnJogadores.TabIndex = 5;
@@ -47,7 +48,7 @@
             // 
             // btnTimes
             // 
-            this.btnTimes.Location = new System.Drawing.Point(118, 180);
+            this.btnTimes.Location = new System.Drawing.Point(87, 180);
             this.btnTimes.Name = "btnTimes";
             this.btnTimes.Size = new System.Drawing.Size(75, 23);
             this.btnTimes.TabIndex = 4;
@@ -68,13 +69,23 @@
             // 
             // btnContrato
             // 
-            this.btnContrato.Location = new System.Drawing.Point(191, 224);
+            this.btnContrato.Location = new System.Drawing.Point(179, 212);
             this.btnContrato.Name = "btnContrato";
-            this.btnContrato.Size = new System.Drawing.Size(75, 23);
+            this.btnContrato.Size = new System.Drawing.Size(87, 23);
             this.btnContrato.TabIndex = 7;
             this.btnContrato.Text = "Contratos";
             this.btnContrato.UseVisualStyleBackColor = true;
             this.btnContrato.Click += new System.EventHandler(this.btnContrato_Click);
+            // 
+            // btnGerenciamentoContrato
+            // 
+            this.btnGerenciamentoContrato.Location = new System.Drawing.Point(137, 241);
+            this.btnGerenciamentoContrato.Name = "btnGerenciamentoContrato";
+            this.btnGerenciamentoContrato.Size = new System.Drawing.Size(168, 23);
+            this.btnGerenciamentoContrato.TabIndex = 8;
+            this.btnGerenciamentoContrato.Text = "Gerenciamento de Contrato";
+            this.btnGerenciamentoContrato.UseVisualStyleBackColor = true;
+            this.btnGerenciamentoContrato.Click += new System.EventHandler(this.button1_Click);
             // 
             // TelaDeInicio
             // 
@@ -82,7 +93,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Barsemlona.Properties.Resources.inicio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(460, 259);
+            this.ClientSize = new System.Drawing.Size(460, 301);
+            this.Controls.Add(this.btnGerenciamentoContrato);
             this.Controls.Add(this.btnContrato);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnJogadores);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.Button btnJogadores;
         private System.Windows.Forms.Button btnTimes;
         private System.Windows.Forms.Button btnContrato;
+        private System.Windows.Forms.Button btnGerenciamentoContrato;
     }
 }

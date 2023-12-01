@@ -83,6 +83,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciamentoContratados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciamentoContratados.Designer.cs">
+      <DependentUpon>GerenciamentoContratados.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenciamentoContrato.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenciamentoContratados.resx">
+      <DependentUpon>GerenciamentoContratados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerenciamentoContrato.resx">
       <DependentUpon>GerenciamentoContrato.cs</DependentUpon>

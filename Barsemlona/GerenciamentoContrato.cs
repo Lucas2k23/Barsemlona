@@ -92,7 +92,7 @@ namespace Barsemlona
                 c.IdTime = int.Parse(txbIdTime.Text);
                 c.ValorContrato = double.Parse(txbValorContrato.Text);
                 c.DataContrato = DateTime.Parse(dtpDataContrato.Text);
-                MessageBox.Show(c.IdJogador.ToString());
+                
                 if (c.Contratar() == true)
                 {
                     MessageBox.Show("Jogador Contratado!", " sucesso!",
@@ -126,6 +126,11 @@ namespace Barsemlona
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
+        }
+
+        private void dgvJogadorContrato_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

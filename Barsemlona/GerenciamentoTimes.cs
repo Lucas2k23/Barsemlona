@@ -148,5 +148,10 @@ namespace Barsemlona
                 Close();
             }
         }
+
+        private void gpbApagar_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

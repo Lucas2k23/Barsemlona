@@ -51,5 +51,11 @@ namespace Barsemlona
             GerenciamentoContrato janela = new GerenciamentoContrato();
             janela.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GerenciamentoContratados janela = new GerenciamentoContratados();
+            janela.Show();
+        }
     }
 }

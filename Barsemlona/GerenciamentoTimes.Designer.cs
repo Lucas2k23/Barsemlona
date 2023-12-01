@@ -42,10 +42,10 @@
             this.txbEditarNome = new System.Windows.Forms.TextBox();
             this.lblNomeEdit = new System.Windows.Forms.Label();
             this.gpbApagar = new System.Windows.Forms.GroupBox();
+            this.lblInformacao = new System.Windows.Forms.Label();
             this.btnApagar = new System.Windows.Forms.Button();
             this.txbApagar = new System.Windows.Forms.TextBox();
             this.lblNomeApagar = new System.Windows.Forms.Label();
-            this.lblInformacao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimes)).BeginInit();
             this.gpbCadastrar.SuspendLayout();
             this.gpbEditar.SuspendLayout();
@@ -207,6 +207,15 @@
             this.gpbApagar.TabIndex = 6;
             this.gpbApagar.TabStop = false;
             this.gpbApagar.Text = "Apagar";
+            this.gpbApagar.Enter += new System.EventHandler(this.gpbApagar_Enter);
+            // 
+            // lblInformacao
+            // 
+            this.lblInformacao.AutoSize = true;
+            this.lblInformacao.Location = new System.Drawing.Point(13, 71);
+            this.lblInformacao.Name = "lblInformacao";
+            this.lblInformacao.Size = new System.Drawing.Size(0, 13);
+            this.lblInformacao.TabIndex = 5;
             // 
             // btnApagar
             // 
@@ -235,14 +244,6 @@
             this.lblNomeApagar.Size = new System.Drawing.Size(76, 13);
             this.lblNomeApagar.TabIndex = 0;
             this.lblNomeApagar.Text = "Nome do Time";
-            // 
-            // lblInformacao
-            // 
-            this.lblInformacao.AutoSize = true;
-            this.lblInformacao.Location = new System.Drawing.Point(13, 71);
-            this.lblInformacao.Name = "lblInformacao";
-            this.lblInformacao.Size = new System.Drawing.Size(0, 13);
-            this.lblInformacao.TabIndex = 5;
             // 
             // GerenciamentoTimes
             // 

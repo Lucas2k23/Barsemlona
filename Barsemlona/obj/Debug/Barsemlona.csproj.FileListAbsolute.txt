@@ -30,3 +30,4 @@ C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.GerenciamentoJogador.resources
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.TelaDeInicio.resources
 C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.GerenciamentoContrato.resources
+C:\Users\lucas.aalves15\source\repos\Barsemlona\Barsemlona\obj\Debug\Barsemlona.GerenciamentoContratados.resources

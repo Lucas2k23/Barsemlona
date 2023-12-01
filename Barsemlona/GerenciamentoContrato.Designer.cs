@@ -33,21 +33,21 @@
             this.lblJogadores = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.gpbContratarJogador = new System.Windows.Forms.GroupBox();
+            this.txbIdTime = new System.Windows.Forms.TextBox();
+            this.lblIdTime = new System.Windows.Forms.Label();
+            this.txbIdJogador = new System.Windows.Forms.TextBox();
+            this.lblIdJogador = new System.Windows.Forms.Label();
+            this.btnContratar = new System.Windows.Forms.Button();
+            this.dtpDataContrato = new System.Windows.Forms.DateTimePicker();
+            this.lblDataContrato = new System.Windows.Forms.Label();
+            this.txbValorContrato = new System.Windows.Forms.TextBox();
+            this.lblValorContrato = new System.Windows.Forms.Label();
+            this.txbTimeContrato = new System.Windows.Forms.TextBox();
+            this.lblNomeTIme = new System.Windows.Forms.Label();
             this.cmbPosicaoContrato = new System.Windows.Forms.ComboBox();
             this.lblPosicao = new System.Windows.Forms.Label();
             this.txbNomeContrato = new System.Windows.Forms.TextBox();
             this.lblJogadorContrato = new System.Windows.Forms.Label();
-            this.lblNomeTIme = new System.Windows.Forms.Label();
-            this.txbTimeContrato = new System.Windows.Forms.TextBox();
-            this.lblValorContrato = new System.Windows.Forms.Label();
-            this.txbValorContrato = new System.Windows.Forms.TextBox();
-            this.lblDataContrato = new System.Windows.Forms.Label();
-            this.dtpDataContrato = new System.Windows.Forms.DateTimePicker();
-            this.btnContratar = new System.Windows.Forms.Button();
-            this.lblIdJogador = new System.Windows.Forms.Label();
-            this.txbIdJogador = new System.Windows.Forms.TextBox();
-            this.lblIdTime = new System.Windows.Forms.Label();
-            this.txbIdTime = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJogadorContrato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimeContrato)).BeginInit();
             this.gpbContratarJogador.SuspendLayout();
@@ -62,6 +62,7 @@
             this.dgvJogadorContrato.Size = new System.Drawing.Size(334, 177);
             this.dgvJogadorContrato.TabIndex = 0;
             this.dgvJogadorContrato.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJogadorContrato_CellClick);
+            this.dgvJogadorContrato.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvJogadorContrato_CellContentClick);
             // 
             // dgvTimeContrato
             // 
@@ -123,6 +124,101 @@
             this.gpbContratarJogador.TabStop = false;
             this.gpbContratarJogador.Text = "Contrato Jogador";
             // 
+            // txbIdTime
+            // 
+            this.txbIdTime.Location = new System.Drawing.Point(76, 141);
+            this.txbIdTime.Name = "txbIdTime";
+            this.txbIdTime.Size = new System.Drawing.Size(100, 20);
+            this.txbIdTime.TabIndex = 20;
+            // 
+            // lblIdTime
+            // 
+            this.lblIdTime.AutoSize = true;
+            this.lblIdTime.Location = new System.Drawing.Point(13, 145);
+            this.lblIdTime.Name = "lblIdTime";
+            this.lblIdTime.Size = new System.Drawing.Size(57, 13);
+            this.lblIdTime.TabIndex = 19;
+            this.lblIdTime.Text = "Id do Time";
+            // 
+            // txbIdJogador
+            // 
+            this.txbIdJogador.Enabled = false;
+            this.txbIdJogador.Location = new System.Drawing.Point(76, 27);
+            this.txbIdJogador.Name = "txbIdJogador";
+            this.txbIdJogador.Size = new System.Drawing.Size(100, 20);
+            this.txbIdJogador.TabIndex = 18;
+            // 
+            // lblIdJogador
+            // 
+            this.lblIdJogador.AutoSize = true;
+            this.lblIdJogador.Location = new System.Drawing.Point(13, 30);
+            this.lblIdJogador.Name = "lblIdJogador";
+            this.lblIdJogador.Size = new System.Drawing.Size(57, 13);
+            this.lblIdJogador.TabIndex = 17;
+            this.lblIdJogador.Text = "Id Jogador";
+            // 
+            // btnContratar
+            // 
+            this.btnContratar.Location = new System.Drawing.Point(52, 287);
+            this.btnContratar.Name = "btnContratar";
+            this.btnContratar.Size = new System.Drawing.Size(155, 26);
+            this.btnContratar.TabIndex = 16;
+            this.btnContratar.Text = "Contratar";
+            this.btnContratar.UseVisualStyleBackColor = true;
+            this.btnContratar.Click += new System.EventHandler(this.btnContratar_Click);
+            // 
+            // dtpDataContrato
+            // 
+            this.dtpDataContrato.Location = new System.Drawing.Point(107, 200);
+            this.dtpDataContrato.Name = "dtpDataContrato";
+            this.dtpDataContrato.Size = new System.Drawing.Size(131, 20);
+            this.dtpDataContrato.TabIndex = 15;
+            // 
+            // lblDataContrato
+            // 
+            this.lblDataContrato.AutoSize = true;
+            this.lblDataContrato.Location = new System.Drawing.Point(10, 206);
+            this.lblDataContrato.Name = "lblDataContrato";
+            this.lblDataContrato.Size = new System.Drawing.Size(88, 13);
+            this.lblDataContrato.TabIndex = 14;
+            this.lblDataContrato.Text = "Data do Contrato";
+            // 
+            // txbValorContrato
+            // 
+            this.txbValorContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbValorContrato.Location = new System.Drawing.Point(52, 259);
+            this.txbValorContrato.Name = "txbValorContrato";
+            this.txbValorContrato.Size = new System.Drawing.Size(155, 22);
+            this.txbValorContrato.TabIndex = 13;
+            // 
+            // lblValorContrato
+            // 
+            this.lblValorContrato.AutoSize = true;
+            this.lblValorContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorContrato.Location = new System.Drawing.Point(73, 240);
+            this.lblValorContrato.Name = "lblValorContrato";
+            this.lblValorContrato.Size = new System.Drawing.Size(111, 16);
+            this.lblValorContrato.TabIndex = 12;
+            this.lblValorContrato.Text = "Valor do Contrato";
+            // 
+            // txbTimeContrato
+            // 
+            this.txbTimeContrato.Enabled = false;
+            this.txbTimeContrato.Location = new System.Drawing.Point(94, 167);
+            this.txbTimeContrato.Name = "txbTimeContrato";
+            this.txbTimeContrato.ReadOnly = true;
+            this.txbTimeContrato.Size = new System.Drawing.Size(100, 20);
+            this.txbTimeContrato.TabIndex = 11;
+            // 
+            // lblNomeTIme
+            // 
+            this.lblNomeTIme.AutoSize = true;
+            this.lblNomeTIme.Location = new System.Drawing.Point(10, 170);
+            this.lblNomeTIme.Name = "lblNomeTIme";
+            this.lblNomeTIme.Size = new System.Drawing.Size(76, 13);
+            this.lblNomeTIme.TabIndex = 10;
+            this.lblNomeTIme.Text = "Nome do Time";
+            // 
             // cmbPosicaoContrato
             // 
             this.cmbPosicaoContrato.Enabled = false;
@@ -170,101 +266,6 @@
             this.lblJogadorContrato.Size = new System.Drawing.Size(91, 13);
             this.lblJogadorContrato.TabIndex = 0;
             this.lblJogadorContrato.Text = "Nome do Jogador";
-            // 
-            // lblNomeTIme
-            // 
-            this.lblNomeTIme.AutoSize = true;
-            this.lblNomeTIme.Location = new System.Drawing.Point(10, 170);
-            this.lblNomeTIme.Name = "lblNomeTIme";
-            this.lblNomeTIme.Size = new System.Drawing.Size(76, 13);
-            this.lblNomeTIme.TabIndex = 10;
-            this.lblNomeTIme.Text = "Nome do Time";
-            // 
-            // txbTimeContrato
-            // 
-            this.txbTimeContrato.Enabled = false;
-            this.txbTimeContrato.Location = new System.Drawing.Point(94, 167);
-            this.txbTimeContrato.Name = "txbTimeContrato";
-            this.txbTimeContrato.ReadOnly = true;
-            this.txbTimeContrato.Size = new System.Drawing.Size(100, 20);
-            this.txbTimeContrato.TabIndex = 11;
-            // 
-            // lblValorContrato
-            // 
-            this.lblValorContrato.AutoSize = true;
-            this.lblValorContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorContrato.Location = new System.Drawing.Point(73, 240);
-            this.lblValorContrato.Name = "lblValorContrato";
-            this.lblValorContrato.Size = new System.Drawing.Size(111, 16);
-            this.lblValorContrato.TabIndex = 12;
-            this.lblValorContrato.Text = "Valor do Contrato";
-            // 
-            // txbValorContrato
-            // 
-            this.txbValorContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbValorContrato.Location = new System.Drawing.Point(52, 259);
-            this.txbValorContrato.Name = "txbValorContrato";
-            this.txbValorContrato.Size = new System.Drawing.Size(155, 22);
-            this.txbValorContrato.TabIndex = 13;
-            // 
-            // lblDataContrato
-            // 
-            this.lblDataContrato.AutoSize = true;
-            this.lblDataContrato.Location = new System.Drawing.Point(10, 206);
-            this.lblDataContrato.Name = "lblDataContrato";
-            this.lblDataContrato.Size = new System.Drawing.Size(88, 13);
-            this.lblDataContrato.TabIndex = 14;
-            this.lblDataContrato.Text = "Data do Contrato";
-            // 
-            // dtpDataContrato
-            // 
-            this.dtpDataContrato.Location = new System.Drawing.Point(107, 200);
-            this.dtpDataContrato.Name = "dtpDataContrato";
-            this.dtpDataContrato.Size = new System.Drawing.Size(131, 20);
-            this.dtpDataContrato.TabIndex = 15;
-            // 
-            // btnContratar
-            // 
-            this.btnContratar.Location = new System.Drawing.Point(52, 287);
-            this.btnContratar.Name = "btnContratar";
-            this.btnContratar.Size = new System.Drawing.Size(155, 26);
-            this.btnContratar.TabIndex = 16;
-            this.btnContratar.Text = "Contratar";
-            this.btnContratar.UseVisualStyleBackColor = true;
-            this.btnContratar.Click += new System.EventHandler(this.btnContratar_Click);
-            // 
-            // lblIdJogador
-            // 
-            this.lblIdJogador.AutoSize = true;
-            this.lblIdJogador.Location = new System.Drawing.Point(13, 30);
-            this.lblIdJogador.Name = "lblIdJogador";
-            this.lblIdJogador.Size = new System.Drawing.Size(57, 13);
-            this.lblIdJogador.TabIndex = 17;
-            this.lblIdJogador.Text = "Id Jogador";
-            // 
-            // txbIdJogador
-            // 
-            this.txbIdJogador.Enabled = false;
-            this.txbIdJogador.Location = new System.Drawing.Point(76, 27);
-            this.txbIdJogador.Name = "txbIdJogador";
-            this.txbIdJogador.Size = new System.Drawing.Size(100, 20);
-            this.txbIdJogador.TabIndex = 18;
-            // 
-            // lblIdTime
-            // 
-            this.lblIdTime.AutoSize = true;
-            this.lblIdTime.Location = new System.Drawing.Point(13, 145);
-            this.lblIdTime.Name = "lblIdTime";
-            this.lblIdTime.Size = new System.Drawing.Size(57, 13);
-            this.lblIdTime.TabIndex = 19;
-            this.lblIdTime.Text = "Id do Time";
-            // 
-            // txbIdTime
-            // 
-            this.txbIdTime.Location = new System.Drawing.Point(76, 141);
-            this.txbIdTime.Name = "txbIdTime";
-            this.txbIdTime.Size = new System.Drawing.Size(100, 20);
-            this.txbIdTime.TabIndex = 20;
             // 
             // GerenciamentoContrato
             // 
